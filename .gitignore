@@ -1,0 +1,3 @@
+/private_net/*
+!/private_net/genesis.json
+/tools/node_modules
