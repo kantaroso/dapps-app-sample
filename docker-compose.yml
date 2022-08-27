@@ -1,0 +1,23 @@
+version: "3"
+services:
+  geth:
+    image: ethereum/client-go
+    entrypoint: "/bin/sh"
+    ports:
+      - 8545:8545
+      - 30303:30303
+    tty: true
+    volumes:
+      - .:/geth
+    working_dir: /geth
+  truffle:
+    build: .
+    tty: true
+    volumes:
+      - ./app:/var/app
+  node:
+    image: node:16-alpine3.15
+    tty: true
+    volumes:
+      - .:/var/app
+    working_dir: /var/app
