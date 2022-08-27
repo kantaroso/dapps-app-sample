@@ -9,6 +9,7 @@ services:
     tty: true
     volumes:
       - .:/geth
+    working_dir: /geth
   truffle:
     build: .
     tty: true

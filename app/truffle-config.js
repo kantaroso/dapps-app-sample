@@ -35,19 +35,21 @@ module.exports = {
    */
 
   networks: {
+    // ----------------------
     // ganache
+    //development: {
+    //  host: "host.docker.internal",     // Localhost (default: none)
+    //  port: 7545,            // Standard Ethereum port (default: none)
+    //  network_id: "*",       // Any network (default: none)
+    //},
+    // ----------------------
+    // geth private
     development: {
-      host: "host.docker.internal",     // Localhost (default: none)
-      port: 7545,            // Standard Ethereum port (default: none)
+      host: "geth",     // Localhost (default: none)
+      port: 8545,            // Standard Ethereum port (default: none)
       network_id: "*",       // Any network (default: none)
     },
-    // geth private
-    // development: {
-    //   host: "geth",     // Localhost (default: none)
-    //   port: 8545,            // Standard Ethereum port (default: none)
-    //   network_id: "*",       // Any network (default: none)
-    // },
-
+    // ----------------------
     // Useful for testing. The `development` name is special - truffle uses it by default
     // if it's defined here and no other network is specified at the command line.
     // You should run a client (like ganache, geth, or parity) in a separate terminal
